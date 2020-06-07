@@ -11,6 +11,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "setting2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -21,21 +22,25 @@
       "size" : "29x29"
     },
     {
+      "filename" : "spotlight2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "spotlight3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "iphone2x icon.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "iphone3x icon.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -71,21 +76,25 @@
       "size" : "40x40"
     },
     {
+      "filename" : "ipad icon.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "ipad2x icon.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "Webp.net-resizeimage.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "appstore.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

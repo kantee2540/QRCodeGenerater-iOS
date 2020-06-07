@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Generate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Generater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
                                 <rect key="frame" x="23" y="80" width="329" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
         </scene>
-        <!--Generate View Controller-->
+        <!--QR-->
         <scene sceneID="3hc-1T-4LB">
             <objects>
                 <viewController id="cXm-gU-0UC" customClass="QRGenerateViewController" customModule="QRCode" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mxU-Jm-Orw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PJQ-tf-tpa"/>
+                    <navigationItem key="navigationItem" title="QR" id="PJQ-tf-tpa"/>
                     <connections>
                         <outlet property="qrImg" destination="rTz-4x-7yD" id="36G-zy-cZu"/>
                     </connections>
