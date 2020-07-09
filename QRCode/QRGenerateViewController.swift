@@ -11,14 +11,15 @@ import UIKit
 class QRGenerateViewController: UIViewController {
 
     @IBOutlet weak var qrImg: UIImageView!
-    var num1: String?
-    var num2: String?
+    var ref1: String?
+    var ref2: String?
+    var amount: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let billId = "0107555000392"
-        if let myqr = generateQR(from: "|\(billId)00\n\(num1!)\n\(num2!)\n0"){
+        if let myqr = generateQR(from: "|\(billId)00\n\(ref1!)\n\(ref2!)\n\(amount!)"){
             qrImg.image = myqr
         }
         

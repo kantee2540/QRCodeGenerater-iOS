@@ -10,31 +10,71 @@ import UIKit
 
 class FormViewController: UIViewController {
 
-    @IBOutlet weak var number1TextField: UITextField!
-    @IBOutlet weak var number2TextField: UITextField!
+    @IBOutlet weak var ref1Textfield: CustomTextfield!
+    @IBOutlet weak var ref2Textfield: CustomTextfield!
+    @IBOutlet weak var amountTextfield: CustomTextfield!
     @IBOutlet weak var submitButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        number1TextField.delegate = self
-        number2TextField.delegate = self
+        self.hideKeyboardWhenTappedAround()
+        
+        ref1Textfield.delegate = self
+        ref2Textfield.delegate = self
+        amountTextfield.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @objc override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "qrshow"{
             let destination = segue.destination as! QRGenerateViewController
-            destination.num1 = number1TextField.text
-            destination.num2 = number2TextField.text
+            destination.ref1 = ref1Textfield.text
+            destination.ref2 = ref2Textfield.text
+            
+            var totalAmount = ""
+            let amountStr = amountTextfield.text!
+            if amountStr.contains("."){
+                let pointIndex = amountStr.index(amountStr.firstIndex(of: ".")!, offsetBy: 0)
+                let decimalIndex = amountStr.index(amountStr.firstIndex(of: ".")!, offsetBy: 1)
+                let lastIndex = amountStr.endIndex
+                let IntNum = amountStr[amountStr.startIndex..<pointIndex]
+                let decimalNum = "\(amountStr[decimalIndex..<lastIndex])"
+                if decimalNum.count >= 2{
+                    totalAmount = "\(IntNum)\(decimalNum)"
+                }else{
+                    totalAmount = "\(IntNum)\(decimalNum)0"
+                }
+                print(totalAmount)
+            }
+            else{
+                totalAmount = "\(amountStr)00"
+            }
+            destination.amount = totalAmount
         }
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification){
+        if self.view.frame.origin.y == 0{
+            self.view.frame.origin.y -= 85
+        }
+        
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y = 0
+        }
+        
     }
 
 }
 
 extension FormViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if number1TextField.text!.count > 0 && number2TextField.text!.count > 0{
+        if ref1Textfield.text!.count > 0 && ref2Textfield.text!.count > 0{
             submitButton.isEnabled = true
         }else{
             submitButton.isEnabled = false
@@ -42,12 +82,20 @@ extension FormViewController: UITextFieldDelegate{
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == number1TextField{
+        if textField == ref1Textfield{
             textField.resignFirstResponder()
-            number2TextField.becomeFirstResponder()
-        }else if textField == number2TextField{
+            ref2Textfield.becomeFirstResponder()
+        }else if textField == ref2Textfield{
             textField.resignFirstResponder()
         }
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.setUnderlined()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.setUnderlined()
     }
 }

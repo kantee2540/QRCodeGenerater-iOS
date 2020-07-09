@@ -15,7 +15,10 @@
 		B31C9B43248770D8001B6734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31C9B41248770D8001B6734 /* LaunchScreen.storyboard */; };
 		B31C9B4E248770D8001B6734 /* QRCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C9B4D248770D8001B6734 /* QRCodeTests.swift */; };
 		B31C9B59248770D8001B6734 /* QRCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C9B58248770D8001B6734 /* QRCodeUITests.swift */; };
+		B367E82324B63A64006D8DEA /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367E82224B63A64006D8DEA /* SubmitButton.swift */; };
 		B3A88571248777200016349D /* QRGenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A88570248777200016349D /* QRGenerateViewController.swift */; };
+		B3C4123C24B614E3000BFC93 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */; };
+		B3C4123E24B624D5000BFC93 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123D24B624D5000BFC93 /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,10 @@
 		B31C9B54248770D8001B6734 /* QRCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31C9B58248770D8001B6734 /* QRCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUITests.swift; sourceTree = "<group>"; };
 		B31C9B5A248770D8001B6734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B367E82224B63A64006D8DEA /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		B3A88570248777200016349D /* QRGenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerateViewController.swift; sourceTree = "<group>"; };
+		B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		B3C4123D24B624D5000BFC93 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				B31C9B41248770D8001B6734 /* LaunchScreen.storyboard */,
 				B31C9B44248770D8001B6734 /* Info.plist */,
 				B3A88570248777200016349D /* QRGenerateViewController.swift */,
+				B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */,
+				B3C4123D24B624D5000BFC93 /* Library.swift */,
+				B367E82224B63A64006D8DEA /* SubmitButton.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -262,10 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C4123C24B614E3000BFC93 /* CustomTextfield.swift in Sources */,
 				B31C9B3B248770D3001B6734 /* FormViewController.swift in Sources */,
 				B31C9B37248770D3001B6734 /* AppDelegate.swift in Sources */,
 				B3A88571248777200016349D /* QRGenerateViewController.swift in Sources */,
+				B367E82324B63A64006D8DEA /* SubmitButton.swift in Sources */,
 				B31C9B39248770D3001B6734 /* SceneDelegate.swift in Sources */,
+				B3C4123E24B624D5000BFC93 /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coco.QRCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seg.QRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coco.QRCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seg.QRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

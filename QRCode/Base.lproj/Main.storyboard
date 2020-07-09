@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHr-ch-F4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-705" y="117"/>
+            <point key="canvasLocation" x="-601" y="117"/>
         </scene>
         <!--Form View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -31,57 +31,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Generater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode Generator Form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
                                 <rect key="frame" x="23" y="80" width="329" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reference 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-T7-L4e">
-                                <rect key="frame" x="23" y="203.5" width="329" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณาใส่เลขที่อ้างอิง" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-T7-L4e" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="23" y="189" width="329" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mDD-pE-fCe"/>
+                                    <constraint firstAttribute="height" constant="50" id="nrL-ID-qPl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reference 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGl-JD-QHY">
-                                <rect key="frame" x="23" y="266.5" width="329" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณาใส่เลขที่อ้างอิง" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DGl-JD-QHY" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="23" y="271" width="329" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7uX-bg-xE1"/>
+                                    <constraint firstAttribute="height" constant="50" id="0C1-9d-1GZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukU-s2-Cxb">
-                                <rect key="frame" x="23" y="339.5" width="329" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukU-s2-Cxb" customClass="SubmitButton" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="72.5" y="453" width="230" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Pfj-3o-nAb"/>
+                                    <constraint firstAttribute="height" constant="50" id="gJB-2c-Rh7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="สร้าง Barcode / QR ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="cXm-gU-0UC" kind="show" identifier="qrshow" id="SSK-0D-nIi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-F7-dus">
+                                <rect key="frame" x="23" y="173" width="329" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-q0-pNk">
+                                <rect key="frame" x="23" y="255" width="329" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงิน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blY-hf-fQ3">
+                                <rect key="frame" x="23" y="337" width="329" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณากรอกจำนวนเงิน" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-t0-3dK" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="23" y="353" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Xr-RZ-XnQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="baJ-T7-L4e" secondAttribute="trailing" constant="23" id="JgM-op-G4g"/>
-                            <constraint firstItem="baJ-T7-L4e" firstAttribute="top" secondItem="nVY-FS-SdM" secondAttribute="bottom" constant="90" id="ME8-V8-TgM"/>
+                            <constraint firstItem="LtH-t0-3dK" firstAttribute="leading" secondItem="blY-hf-fQ3" secondAttribute="leading" id="1ca-5J-LZw"/>
+                            <constraint firstItem="blY-hf-fQ3" firstAttribute="leading" secondItem="DGl-JD-QHY" secondAttribute="leading" id="3fV-f5-g8e"/>
+                            <constraint firstItem="ukU-s2-Cxb" firstAttribute="top" secondItem="LtH-t0-3dK" secondAttribute="bottom" constant="50" id="4Ao-M1-XE6"/>
+                            <constraint firstItem="4QK-q0-pNk" firstAttribute="top" secondItem="baJ-T7-L4e" secondAttribute="bottom" constant="16" id="8co-hK-YIY"/>
+                            <constraint firstItem="LtH-t0-3dK" firstAttribute="top" secondItem="blY-hf-fQ3" secondAttribute="bottom" id="IFf-Tq-HU6"/>
+                            <constraint firstItem="blY-hf-fQ3" firstAttribute="top" secondItem="DGl-JD-QHY" secondAttribute="bottom" constant="16" id="SPV-he-Odd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nVY-FS-SdM" secondAttribute="trailing" constant="23" id="Slt-Ev-CAA"/>
+                            <constraint firstItem="blY-hf-fQ3" firstAttribute="trailing" secondItem="DGl-JD-QHY" secondAttribute="trailing" id="Tx4-aZ-2Ee"/>
+                            <constraint firstItem="4QK-q0-pNk" firstAttribute="leading" secondItem="baJ-T7-L4e" secondAttribute="leading" id="UbM-SS-kGH"/>
+                            <constraint firstItem="3Pz-F7-dus" firstAttribute="top" secondItem="nVY-FS-SdM" secondAttribute="bottom" constant="59.5" id="WfJ-es-xBj"/>
                             <constraint firstItem="nVY-FS-SdM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="XVf-w4-sbk"/>
-                            <constraint firstItem="DGl-JD-QHY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="c4u-fh-Atu"/>
+                            <constraint firstItem="4QK-q0-pNk" firstAttribute="trailing" secondItem="baJ-T7-L4e" secondAttribute="trailing" id="Z7B-iE-QFP"/>
+                            <constraint firstItem="baJ-T7-L4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="ZWc-Ba-WV1"/>
+                            <constraint firstItem="ukU-s2-Cxb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cGJ-8Q-8bF"/>
                             <constraint firstItem="nVY-FS-SdM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="faS-0P-gpr"/>
-                            <constraint firstItem="ukU-s2-Cxb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="jFI-Am-4t3"/>
-                            <constraint firstItem="baJ-T7-L4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="kvV-ul-P1j"/>
-                            <constraint firstItem="ukU-s2-Cxb" firstAttribute="top" secondItem="DGl-JD-QHY" secondAttribute="bottom" constant="23" id="l07-VA-4Sp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukU-s2-Cxb" secondAttribute="trailing" constant="23" id="m3G-67-B9k"/>
-                            <constraint firstItem="DGl-JD-QHY" firstAttribute="top" secondItem="baJ-T7-L4e" secondAttribute="bottom" constant="13" id="p8D-bp-H6e"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGl-JD-QHY" secondAttribute="trailing" constant="23" id="t3n-fk-q9P"/>
+                            <constraint firstItem="baJ-T7-L4e" firstAttribute="top" secondItem="3Pz-F7-dus" secondAttribute="bottom" id="hDr-vI-HwT"/>
+                            <constraint firstItem="DGl-JD-QHY" firstAttribute="trailing" secondItem="4QK-q0-pNk" secondAttribute="trailing" id="qpA-Xt-9FQ"/>
+                            <constraint firstItem="DGl-JD-QHY" firstAttribute="top" secondItem="4QK-q0-pNk" secondAttribute="bottom" id="tJ7-gO-um9"/>
+                            <constraint firstItem="DGl-JD-QHY" firstAttribute="leading" secondItem="4QK-q0-pNk" secondAttribute="leading" id="tzT-oY-7Zy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="baJ-T7-L4e" secondAttribute="trailing" constant="23" id="vWY-DN-FeS"/>
+                            <constraint firstItem="LtH-t0-3dK" firstAttribute="trailing" secondItem="blY-hf-fQ3" secondAttribute="trailing" id="wEV-Hp-iwJ"/>
+                            <constraint firstItem="3Pz-F7-dus" firstAttribute="trailing" secondItem="baJ-T7-L4e" secondAttribute="trailing" id="zOA-6c-PwE"/>
+                            <constraint firstItem="3Pz-F7-dus" firstAttribute="leading" secondItem="baJ-T7-L4e" secondAttribute="leading" id="zyK-YX-Fkk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wxx-fd-JAq"/>
                     <connections>
-                        <outlet property="number1TextField" destination="baJ-T7-L4e" id="qII-3G-Uc6"/>
-                        <outlet property="number2TextField" destination="DGl-JD-QHY" id="OPh-Gu-pCp"/>
+                        <outlet property="amountTextfield" destination="LtH-t0-3dK" id="1w1-0c-Pf0"/>
+                        <outlet property="ref1Textfield" destination="baJ-T7-L4e" id="qII-3G-Uc6"/>
+                        <outlet property="ref2Textfield" destination="DGl-JD-QHY" id="OPh-Gu-pCp"/>
                         <outlet property="submitButton" destination="ukU-s2-Cxb" id="Meg-WX-x9B"/>
                     </connections>
                 </viewController>
