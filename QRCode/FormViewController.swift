@@ -33,26 +33,7 @@ class FormViewController: UIViewController {
             let destination = segue.destination as! QRGenerateViewController
             destination.ref1 = ref1Textfield.text
             destination.ref2 = ref2Textfield.text
-            
-            var totalAmount = ""
-            let amountStr = amountTextfield.text!
-            if amountStr.contains("."){
-                let pointIndex = amountStr.index(amountStr.firstIndex(of: ".")!, offsetBy: 0)
-                let decimalIndex = amountStr.index(amountStr.firstIndex(of: ".")!, offsetBy: 1)
-                let lastIndex = amountStr.endIndex
-                let IntNum = amountStr[amountStr.startIndex..<pointIndex]
-                let decimalNum = "\(amountStr[decimalIndex..<lastIndex])"
-                if decimalNum.count >= 2{
-                    totalAmount = "\(IntNum)\(decimalNum)"
-                }else{
-                    totalAmount = "\(IntNum)\(decimalNum)0"
-                }
-                print(totalAmount)
-            }
-            else{
-                totalAmount = "\(amountStr)00"
-            }
-            destination.amount = totalAmount
+            destination.amount = amountTextfield.text
         }
     }
     

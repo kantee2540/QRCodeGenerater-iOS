@@ -16,6 +16,7 @@
 		B31C9B4E248770D8001B6734 /* QRCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C9B4D248770D8001B6734 /* QRCodeTests.swift */; };
 		B31C9B59248770D8001B6734 /* QRCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C9B58248770D8001B6734 /* QRCodeUITests.swift */; };
 		B367E82324B63A64006D8DEA /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367E82224B63A64006D8DEA /* SubmitButton.swift */; };
+		B367E82624B75E3D006D8DEA /* SukhumvitSet.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B367E82524B75E3D006D8DEA /* SukhumvitSet.ttc */; };
 		B3A88571248777200016349D /* QRGenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A88570248777200016349D /* QRGenerateViewController.swift */; };
 		B3C4123C24B614E3000BFC93 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */; };
 		B3C4123E24B624D5000BFC93 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123D24B624D5000BFC93 /* Library.swift */; };
@@ -54,6 +55,7 @@
 		B31C9B58248770D8001B6734 /* QRCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUITests.swift; sourceTree = "<group>"; };
 		B31C9B5A248770D8001B6734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B367E82224B63A64006D8DEA /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
+		B367E82524B75E3D006D8DEA /* SukhumvitSet.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SukhumvitSet.ttc; sourceTree = "<group>"; };
 		B3A88570248777200016349D /* QRGenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerateViewController.swift; sourceTree = "<group>"; };
 		B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		B3C4123D24B624D5000BFC93 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		B31C9B2A248770D3001B6734 = {
 			isa = PBXGroup;
 			children = (
+				B367E82424B75DFD006D8DEA /* Font */,
 				B31C9B35248770D3001B6734 /* QRCode */,
 				B31C9B4C248770D8001B6734 /* QRCodeTests */,
 				B31C9B57248770D8001B6734 /* QRCodeUITests */,
@@ -138,6 +141,14 @@
 				B31C9B5A248770D8001B6734 /* Info.plist */,
 			);
 			path = QRCodeUITests;
+			sourceTree = "<group>";
+		};
+		B367E82424B75DFD006D8DEA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B367E82524B75E3D006D8DEA /* SukhumvitSet.ttc */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31C9B43248770D8001B6734 /* LaunchScreen.storyboard in Resources */,
+				B367E82624B75E3D006D8DEA /* SukhumvitSet.ttc in Resources */,
 				B31C9B40248770D8001B6734 /* Assets.xcassets in Resources */,
 				B31C9B3E248770D3001B6734 /* Main.storyboard in Resources */,
 			);
