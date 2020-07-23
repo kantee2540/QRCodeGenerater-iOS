@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rd-qF-Op2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rd-qF-Op2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,6 +21,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jsd-AI-mL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="seg-color"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LN7-sY-Z0S"/>
@@ -38,14 +39,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode Form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
-                                <rect key="frame" x="23" y="80" width="329" height="44.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="อาคเนย์ประกันภัย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-FS-SdM">
+                                <rect key="frame" x="23" y="80" width="329" height="33"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="28"/>
                                 <color key="textColor" name="seg-color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณาใส่เลขที่อ้างอิง" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-T7-L4e" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="23" y="211" width="329" height="50"/>
+                                <rect key="frame" x="23" y="192.5" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nrL-ID-qPl"/>
                                 </constraints>
@@ -53,7 +54,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณาใส่เลขที่อ้างอิง" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DGl-JD-QHY" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="23" y="304" width="329" height="50"/>
+                                <rect key="frame" x="23" y="278.5" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0C1-9d-1GZ"/>
                                 </constraints>
@@ -61,7 +62,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukU-s2-Cxb" customClass="SubmitButton" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="497" width="230" height="50"/>
+                                <rect key="frame" x="72.5" y="464.5" width="230" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Pfj-3o-nAb"/>
@@ -81,25 +82,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-F7-dus">
-                                <rect key="frame" x="23" y="184" width="329" height="27"/>
+                                <rect key="frame" x="23" y="172.5" width="329" height="20"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-q0-pNk">
-                                <rect key="frame" x="23" y="277" width="329" height="27"/>
+                                <rect key="frame" x="23" y="258.5" width="329" height="20"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงิน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blY-hf-fQ3">
-                                <rect key="frame" x="23" y="370" width="329" height="27"/>
+                                <rect key="frame" x="23" y="344.5" width="329" height="20"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณากรอกจำนวนเงิน" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-t0-3dK" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="23" y="397" width="329" height="50"/>
+                                <rect key="frame" x="23" y="364.5" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1Xr-RZ-XnQ"/>
                                 </constraints>
@@ -156,65 +157,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-4x-7yD">
-                                <rect key="frame" x="101.5" y="376.5" width="172" height="172"/>
+                                <rect key="frame" x="101.5" y="365.5" width="172" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="5Ws-oi-L36"/>
                                     <constraint firstAttribute="width" constant="172" id="kiG-sC-348"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บริษัท อาคเนย์ประกันภัย จำกัด" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-eN-0cz">
-                                <rect key="frame" x="29.5" y="74" width="316" height="41.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="อาคเนย์ประกันภัย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-eN-0cz">
+                                <rect key="frame" x="36.5" y="74" width="302" height="30.5"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="26"/>
                                 <color key="textColor" name="seg-color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-LD-6HP">
-                                <rect key="frame" x="29.5" y="123.5" width="316" height="130"/>
+                                <rect key="frame" x="36.5" y="112.5" width="302" height="130"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บริการ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-Kc-6qu">
-                                        <rect key="frame" x="0.0" y="8" width="47.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="8" width="49.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <color key="textColor" name="seg-color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref1 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-LW-1LM">
-                                        <rect key="frame" x="0.0" y="32" width="37.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="39.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <color key="textColor" name="seg-color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงิน :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-kA-RUW">
-                                        <rect key="frame" x="0.0" y="80" width="70" height="24"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="71.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <color key="textColor" name="seg-color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCB KBSCB KBSCB KBSCB KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erL-ij-54M">
-                                        <rect key="frame" x="70.5" y="8" width="190" height="24"/>
+                                        <rect key="frame" x="72.5" y="8" width="221.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref2 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-gB-u6w">
-                                        <rect key="frame" x="0.0" y="56" width="37.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="43" width="39.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <color key="textColor" name="seg-color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCq-QH-HWV">
-                                        <rect key="frame" x="69.5" y="56" width="26" height="24"/>
+                                        <rect key="frame" x="71.5" y="43" width="30.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9R-vK-s5w">
-                                        <rect key="frame" x="69.5" y="32" width="26" height="24"/>
+                                        <rect key="frame" x="71.5" y="25.5" width="30.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-VI-F59">
-                                        <rect key="frame" x="78" y="80" width="29.5" height="24"/>
+                                        <rect key="frame" x="79.5" y="60.5" width="29.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -246,14 +247,14 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-fS-Aw7">
-                                <rect key="frame" x="22.5" y="261.5" width="330" height="60"/>
+                                <rect key="frame" x="22.5" y="250.5" width="330" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9nx-0F-jBM"/>
                                     <constraint firstAttribute="width" constant="330" id="ZRV-RL-uhf"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmR-EE-KLY">
-                                <rect key="frame" x="173.5" y="329.5" width="28.5" height="13.5"/>
+                                <rect key="frame" x="173.5" y="318.5" width="28.5" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +293,7 @@
     </scenes>
     <resources>
         <namedColor name="seg-color">
-            <color red="0.42745098039215684" green="0.66666666666666663" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.42745095491409302" green="0.66666668653488159" blue="0.35294115543365479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
