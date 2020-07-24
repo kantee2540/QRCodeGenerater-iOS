@@ -23,9 +23,9 @@ class QRGenerateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let billId = "0107555000392"
+        let billId = UserDefaults.standard.string(forKey: "taxid")
         let amountInt = formatDecimal(amountStr: amount!)
-        let codeFormat = "|\(billId)00\n\(ref1!)\n\(ref2!)\n\(amountInt)"
+        let codeFormat = "|\(billId!)00\n\(ref1!)\n\(ref2!)\n\(amountInt)"
         
         ref1Label.text = ref1
         ref2Label.text = ref2
@@ -43,7 +43,7 @@ class QRGenerateViewController: UIViewController {
         }
         
         if let myBarcode = generateBarcode(from: codeFormat){
-            let barcode = "\(billId) \(ref1!) \(ref2!) \(amountInt)"
+            let barcode = "\(billId!) \(ref1!) \(ref2!) \(amountInt)"
             barcodeCodeLabel.text = barcode
             barcodeImg.image = myBarcode
         }

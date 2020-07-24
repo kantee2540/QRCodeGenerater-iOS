@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let launchBefore = UserDefaults.standard.bool(forKey: "launchbefore")
+        if !launchBefore{
+            UserDefaults.standard.setValue("0107555000392", forKey: "taxid")
+            UserDefaults.standard.setValue(true, forKey: "launchbefore")
+        }
+        
         return true
     }
 

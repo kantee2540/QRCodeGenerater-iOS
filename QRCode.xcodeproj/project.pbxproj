@@ -18,6 +18,8 @@
 		B367E82324B63A64006D8DEA /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367E82224B63A64006D8DEA /* SubmitButton.swift */; };
 		B367E82624B75E3D006D8DEA /* SukhumvitSet.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B367E82524B75E3D006D8DEA /* SukhumvitSet.ttc */; };
 		B3A88571248777200016349D /* QRGenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A88570248777200016349D /* QRGenerateViewController.swift */; };
+		B3BC4DF424CB1ABC004BAD16 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BC4DF324CB1ABC004BAD16 /* SettingsTableViewController.swift */; };
+		B3BC4DF624CB1FAE004BAD16 /* TaxIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BC4DF524CB1FAE004BAD16 /* TaxIDViewController.swift */; };
 		B3C4123C24B614E3000BFC93 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */; };
 		B3C4123E24B624D5000BFC93 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4123D24B624D5000BFC93 /* Library.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		B367E82224B63A64006D8DEA /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		B367E82524B75E3D006D8DEA /* SukhumvitSet.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SukhumvitSet.ttc; sourceTree = "<group>"; };
 		B3A88570248777200016349D /* QRGenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerateViewController.swift; sourceTree = "<group>"; };
+		B3BC4DF324CB1ABC004BAD16 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		B3BC4DF524CB1FAE004BAD16 /* TaxIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxIDViewController.swift; sourceTree = "<group>"; };
 		B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		B3C4123D24B624D5000BFC93 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 				B3C4123B24B614E2000BFC93 /* CustomTextfield.swift */,
 				B3C4123D24B624D5000BFC93 /* Library.swift */,
 				B367E82224B63A64006D8DEA /* SubmitButton.swift */,
+				B3BC4DF324CB1ABC004BAD16 /* SettingsTableViewController.swift */,
+				B3BC4DF524CB1FAE004BAD16 /* TaxIDViewController.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 				B3C4123C24B614E3000BFC93 /* CustomTextfield.swift in Sources */,
 				B31C9B3B248770D3001B6734 /* FormViewController.swift in Sources */,
 				B31C9B37248770D3001B6734 /* AppDelegate.swift in Sources */,
+				B3BC4DF624CB1FAE004BAD16 /* TaxIDViewController.swift in Sources */,
 				B3A88571248777200016349D /* QRGenerateViewController.swift in Sources */,
+				B3BC4DF424CB1ABC004BAD16 /* SettingsTableViewController.swift in Sources */,
 				B367E82324B63A64006D8DEA /* SubmitButton.swift in Sources */,
 				B31C9B39248770D3001B6734 /* SceneDelegate.swift in Sources */,
 				B3C4123E24B624D5000BFC93 /* Library.swift in Sources */,
@@ -463,7 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = R6LKPZ4CU5;
 				INFOPLIST_FILE = QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = R6LKPZ4CU5;
 				INFOPLIST_FILE = QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
