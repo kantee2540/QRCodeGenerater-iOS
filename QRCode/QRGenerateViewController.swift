@@ -73,7 +73,7 @@ class QRGenerateViewController: UIViewController {
         
         if let filter = CIFilter(name: "CICode128BarcodeGenerator"){
             filter.setValue(data, forKey: "inputMessage")
-            let tranform = CGAffineTransform(scaleX: 10, y: 10)
+            let tranform = CGAffineTransform(scaleX: 1, y: 1)
             if let output = filter.outputImage?.transformed(by: tranform){
                 return UIImage(ciImage: output)
             }
