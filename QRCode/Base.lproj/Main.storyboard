@@ -187,7 +187,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณากรอกชื่อบริษัท" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-lo-MJf" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณากรอกชื่อบริษัท" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-lo-MJf" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
                                 <rect key="frame" x="23" y="263.5" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="idQ-jR-fwJ"/>

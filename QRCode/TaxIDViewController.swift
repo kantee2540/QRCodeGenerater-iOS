@@ -61,4 +61,14 @@ class TaxIDViewController: UIViewController, UITextFieldDelegate {
             submitButton.isEnabled = false
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{
+            nextField.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
+        
+        return false
+    }
 }
