@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchBefore = UserDefaults.standard.bool(forKey: "launchbefore")
         if !launchBefore{
             UserDefaults.standard.setValue("0107555000392", forKey: "taxid")
+            UserDefaults.standard.setValue("อาคเนย์ประกันภัย", forKey: "companyname")
             UserDefaults.standard.setValue(true, forKey: "launchbefore")
         }
         

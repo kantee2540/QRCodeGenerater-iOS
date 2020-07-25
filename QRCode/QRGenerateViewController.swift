@@ -10,6 +10,7 @@ import UIKit
 
 class QRGenerateViewController: UIViewController {
 
+    @IBOutlet weak var companyTitle: UILabel!
     @IBOutlet weak var ref1Label: UILabel!
     @IBOutlet weak var ref2Label: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -23,6 +24,7 @@ class QRGenerateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        companyTitle.text = UserDefaults.standard.string(forKey: "companyname")
         let billId = UserDefaults.standard.string(forKey: "taxid")
         let amountInt = formatDecimal(amountStr: amount!)
         let codeFormat = "|\(billId!)00\n\(ref1!)\n\(ref2!)\n\(amountInt)"

@@ -63,7 +63,7 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" name="seg-color"/>
                                         <connections>
-                                            <segue destination="oTF-Rx-1XN" kind="show" id="gv0-uI-9Qt"/>
+                                            <segue destination="oTF-Rx-1XN" kind="show" identifier="taxid" id="gv0-uI-9Qt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -147,8 +147,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="เลขผู้เสียภาษีอาการ" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZIm-iQ-L9U" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="23" y="176.5" width="329" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="เลขผู้เสียภาษีอาการ 10 หลัก" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZIm-iQ-L9U" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="23" y="198.5" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nNd-QN-7tN"/>
                                 </constraints>
@@ -156,7 +156,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZS-VE-8mc" customClass="SubmitButton" customModule="QRCode" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="266.5" width="230" height="50"/>
+                                <rect key="frame" x="72.5" y="370.5" width="230" height="50"/>
                                 <color key="backgroundColor" name="seg-color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="BR5-ez-eMD"/>
@@ -175,17 +175,46 @@
                                     <action selector="tapchangeTax:" destination="oTF-Rx-1XN" eventType="touchUpInside" id="iI5-Zx-iBg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขผู้เสียภาษี" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-r9-bp7">
+                                <rect key="frame" x="23" y="171.5" width="329" height="27"/>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อบริษัท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mp-nK-crM">
+                                <rect key="frame" x="23" y="263.5" width="329" height="27"/>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="กรุณากรอกชื่อบริษัท" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-lo-MJf" customClass="CustomTextfield" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="23" y="290.5" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="idQ-jR-fwJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Pg6-r9-bp7" firstAttribute="trailing" secondItem="6be-gT-Qx2" secondAttribute="trailing" id="5uk-o4-RdE"/>
+                            <constraint firstItem="wQ9-lo-MJf" firstAttribute="leading" secondItem="8Mp-nK-crM" secondAttribute="leading" id="7Y6-rk-3si"/>
                             <constraint firstItem="6be-gT-Qx2" firstAttribute="leading" secondItem="jQs-4K-cCM" secondAttribute="leading" constant="23" id="7v2-pa-UAe"/>
-                            <constraint firstItem="bZS-VE-8mc" firstAttribute="top" secondItem="ZIm-iQ-L9U" secondAttribute="bottom" constant="40" id="DRD-ai-k46"/>
+                            <constraint firstItem="ZIm-iQ-L9U" firstAttribute="top" secondItem="Pg6-r9-bp7" secondAttribute="bottom" id="BVm-lM-09L"/>
                             <constraint firstItem="jQs-4K-cCM" firstAttribute="trailing" secondItem="6be-gT-Qx2" secondAttribute="trailing" constant="23" id="KtS-b8-AkY"/>
+                            <constraint firstItem="8Mp-nK-crM" firstAttribute="trailing" secondItem="ZIm-iQ-L9U" secondAttribute="trailing" id="LR4-kv-pjv"/>
+                            <constraint firstItem="wQ9-lo-MJf" firstAttribute="trailing" secondItem="8Mp-nK-crM" secondAttribute="trailing" id="OfS-En-eEI"/>
                             <constraint firstItem="ZIm-iQ-L9U" firstAttribute="leading" secondItem="6be-gT-Qx2" secondAttribute="leading" id="QQS-x5-FPf"/>
                             <constraint firstItem="6be-gT-Qx2" firstAttribute="top" secondItem="jQs-4K-cCM" secondAttribute="top" constant="35" id="TRO-QF-vUl"/>
+                            <constraint firstItem="8Mp-nK-crM" firstAttribute="top" secondItem="ZIm-iQ-L9U" secondAttribute="bottom" constant="15" id="X9Q-Jn-URo"/>
+                            <constraint firstItem="wQ9-lo-MJf" firstAttribute="top" secondItem="8Mp-nK-crM" secondAttribute="bottom" id="aCD-aB-9E4"/>
                             <constraint firstItem="bZS-VE-8mc" firstAttribute="centerX" secondItem="jQs-4K-cCM" secondAttribute="centerX" id="aa2-co-wkh"/>
-                            <constraint firstItem="ZIm-iQ-L9U" firstAttribute="top" secondItem="6be-gT-Qx2" secondAttribute="bottom" constant="35" id="qUS-zt-ssq"/>
+                            <constraint firstItem="bZS-VE-8mc" firstAttribute="top" secondItem="wQ9-lo-MJf" secondAttribute="bottom" constant="30" id="gvB-72-JNk"/>
+                            <constraint firstItem="Pg6-r9-bp7" firstAttribute="leading" secondItem="6be-gT-Qx2" secondAttribute="leading" id="r6G-pv-oyx"/>
                             <constraint firstItem="ZIm-iQ-L9U" firstAttribute="trailing" secondItem="6be-gT-Qx2" secondAttribute="trailing" id="sb8-Lx-Qla"/>
+                            <constraint firstItem="Pg6-r9-bp7" firstAttribute="top" secondItem="6be-gT-Qx2" secondAttribute="bottom" constant="30" id="vKd-My-bC3"/>
+                            <constraint firstItem="8Mp-nK-crM" firstAttribute="leading" secondItem="ZIm-iQ-L9U" secondAttribute="leading" id="wM6-rg-3hZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jQs-4K-cCM"/>
                     </view>
@@ -197,6 +226,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="companyTextfield" destination="wQ9-lo-MJf" id="dhG-iv-yDe"/>
                         <outlet property="submitButton" destination="bZS-VE-8mc" id="YgC-0o-qbS"/>
                         <outlet property="taxTextfield" destination="ZIm-iQ-L9U" id="Hys-EK-NUS"/>
                     </connections>
@@ -330,12 +360,13 @@
                     <navigationItem key="navigationItem" id="wxx-fd-JAq">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="Hjo-lL-kex">
                             <connections>
-                                <segue destination="SQT-V9-8PS" kind="presentation" id="b9J-Tc-FbX"/>
+                                <segue destination="SQT-V9-8PS" kind="presentation" identifier="setting" id="b9J-Tc-FbX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextfield" destination="LtH-t0-3dK" id="1w1-0c-Pf0"/>
+                        <outlet property="companyTitle" destination="nVY-FS-SdM" id="abb-zd-bck"/>
                         <outlet property="ref1Textfield" destination="baJ-T7-L4e" id="qII-3G-Uc6"/>
                         <outlet property="ref2Textfield" destination="DGl-JD-QHY" id="OPh-Gu-pCp"/>
                         <outlet property="submitButton" destination="ukU-s2-Cxb" id="Meg-WX-x9B"/>
@@ -478,6 +509,7 @@
                         <outlet property="amountLabel" destination="H9P-VI-F59" id="O4n-LJ-nrY"/>
                         <outlet property="barcodeCodeLabel" destination="bmR-EE-KLY" id="mG4-da-wbG"/>
                         <outlet property="barcodeImg" destination="Wq5-fS-Aw7" id="Pds-vr-hAD"/>
+                        <outlet property="companyTitle" destination="dZc-eN-0cz" id="3QP-QA-uqv"/>
                         <outlet property="qrImg" destination="rTz-4x-7yD" id="36G-zy-cZu"/>
                         <outlet property="ref1Label" destination="m9R-vK-s5w" id="zBV-Th-2kn"/>
                         <outlet property="ref2Label" destination="SCq-QH-HWV" id="61S-Ql-QAg"/>

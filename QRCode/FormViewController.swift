@@ -8,8 +8,12 @@
 
 import UIKit
 
-class FormViewController: UIViewController {
+class FormViewController: UIViewController, TaxIDDelegate{
+    func dismissFromtaxID() {
+        updateTitle()
+    }
 
+    @IBOutlet weak var companyTitle: UILabel!
     @IBOutlet weak var ref1Textfield: CustomTextfield!
     @IBOutlet weak var ref2Textfield: CustomTextfield!
     @IBOutlet weak var amountTextfield: CustomTextfield!
@@ -28,12 +32,27 @@ class FormViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateTitle()
+    }
+    
+    private func updateTitle(){
+        let company = UserDefaults.standard.string(forKey: "companyname")
+        companyTitle.text = company
+    }
+    
     @objc override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "qrshow"{
             let destination = segue.destination as! QRGenerateViewController
             destination.ref1 = ref1Textfield.text
             destination.ref2 = ref2Textfield.text
             destination.amount = amountTextfield.text
+        }else if segue.identifier == "setting"{
+            if let destination = segue.destination as? UINavigationController{
+                if let childVc = destination.topViewController as? SettingsTableViewController{
+                    childVc.taxDelegate = self
+                }
+            }
         }
     }
     
